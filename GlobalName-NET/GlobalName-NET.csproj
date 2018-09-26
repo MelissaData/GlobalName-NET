@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{5DBE5D9D-4300-4C43-899A-DC5F50AD4F24}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>GlobalName_NET_REST</RootNamespace>
-    <AssemblyName>GlobalName-NET-REST</AssemblyName>
+    <RootNamespace>GlobalName_NET</RootNamespace>
+    <AssemblyName>GlobalName-NET</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
