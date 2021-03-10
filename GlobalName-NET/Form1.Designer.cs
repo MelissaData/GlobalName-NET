@@ -13,6 +13,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabRequest = new System.Windows.Forms.TabControl();
             this.tabInput = new System.Windows.Forms.TabPage();
+            this.txtCountryIn = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtCompanyIn = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.txtLicense = new System.Windows.Forms.TextBox();
             this.txtNameIn = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
@@ -22,6 +26,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tabOptions = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.optGenderAggression = new System.Windows.Forms.ComboBox();
             this.optCorrectFirstName = new System.Windows.Forms.CheckBox();
             this.optNameHint = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
@@ -35,12 +41,15 @@
             this.label23 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lnkWiki = new System.Windows.Forms.LinkLabel();
-            this.txtCompanyIn = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.optGenderAggression = new System.Windows.Forms.ComboBox();
+            this.optSalutation1 = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.optSalutation2 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.optMiddleNameLogic = new System.Windows.Forms.ComboBox();
+            this.optSalutation3 = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.optSalutation4 = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.tabRequest.SuspendLayout();
             this.tabInput.SuspendLayout();
@@ -59,6 +68,8 @@
             this.panel1.BackColor = System.Drawing.Color.RoyalBlue;
             this.panel1.Controls.Add(this.tabRequest);
             this.panel1.Controls.Add(this.tabResponse);
+            this.panel1.Controls.Add(this.btnClear);
+            this.panel1.Controls.Add(this.btnSubmit);
             this.panel1.Location = new System.Drawing.Point(125, 103);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1096, 619);
@@ -74,28 +85,68 @@
             this.tabRequest.Location = new System.Drawing.Point(28, 26);
             this.tabRequest.Name = "tabRequest";
             this.tabRequest.SelectedIndex = 0;
-            this.tabRequest.Size = new System.Drawing.Size(298, 568);
+            this.tabRequest.Size = new System.Drawing.Size(298, 535);
             this.tabRequest.TabIndex = 16;
             // 
             // tabInput
             // 
             this.tabInput.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.tabInput.Controls.Add(this.txtCountryIn);
+            this.tabInput.Controls.Add(this.label6);
             this.tabInput.Controls.Add(this.txtCompanyIn);
             this.tabInput.Controls.Add(this.label3);
             this.tabInput.Controls.Add(this.txtLicense);
             this.tabInput.Controls.Add(this.txtNameIn);
             this.tabInput.Controls.Add(this.label25);
             this.tabInput.Controls.Add(this.label22);
-            this.tabInput.Controls.Add(this.btnClear);
-            this.tabInput.Controls.Add(this.btnSubmit);
             this.tabInput.Controls.Add(this.label2);
             this.tabInput.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.tabInput.Location = new System.Drawing.Point(4, 22);
             this.tabInput.Name = "tabInput";
             this.tabInput.Padding = new System.Windows.Forms.Padding(3);
-            this.tabInput.Size = new System.Drawing.Size(290, 542);
+            this.tabInput.Size = new System.Drawing.Size(290, 509);
             this.tabInput.TabIndex = 0;
             this.tabInput.Text = "Input";
+            // 
+            // txtCountryIn
+            // 
+            this.txtCountryIn.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.txtCountryIn.Location = new System.Drawing.Point(18, 239);
+            this.txtCountryIn.Name = "txtCountryIn";
+            this.txtCountryIn.Size = new System.Drawing.Size(250, 22);
+            this.txtCountryIn.TabIndex = 58;
+            this.txtCountryIn.Text = "DEU";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label6.Location = new System.Drawing.Point(15, 221);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(51, 15);
+            this.label6.TabIndex = 57;
+            this.label6.Text = "Country";
+            // 
+            // txtCompanyIn
+            // 
+            this.txtCompanyIn.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.txtCompanyIn.Location = new System.Drawing.Point(18, 176);
+            this.txtCompanyIn.Name = "txtCompanyIn";
+            this.txtCompanyIn.Size = new System.Drawing.Size(250, 22);
+            this.txtCompanyIn.TabIndex = 56;
+            this.txtCompanyIn.Text = "Melissa Data GmbH";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label3.Location = new System.Drawing.Point(15, 158);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(58, 15);
+            this.label3.TabIndex = 55;
+            this.label3.Text = "Company";
             // 
             // txtLicense
             // 
@@ -113,7 +164,7 @@
             this.txtNameIn.Name = "txtNameIn";
             this.txtNameIn.Size = new System.Drawing.Size(250, 22);
             this.txtNameIn.TabIndex = 1;
-            this.txtNameIn.Text = "Ray Melissa";
+            this.txtNameIn.Text = "Herr Karl Von Baun";
             // 
             // label25
             // 
@@ -141,7 +192,7 @@
             // 
             this.btnClear.BackColor = System.Drawing.Color.LightGray;
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClear.Location = new System.Drawing.Point(98, 219);
+            this.btnClear.Location = new System.Drawing.Point(152, 571);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(68, 23);
             this.btnClear.TabIndex = 47;
@@ -153,7 +204,7 @@
             // 
             this.btnSubmit.BackColor = System.Drawing.Color.LightGray;
             this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSubmit.Location = new System.Drawing.Point(172, 219);
+            this.btnSubmit.Location = new System.Drawing.Point(226, 571);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(96, 23);
             this.btnSubmit.TabIndex = 46;
@@ -181,14 +232,21 @@
             this.tabOptions.Location = new System.Drawing.Point(4, 22);
             this.tabOptions.Name = "tabOptions";
             this.tabOptions.Padding = new System.Windows.Forms.Padding(3);
-            this.tabOptions.Size = new System.Drawing.Size(290, 542);
+            this.tabOptions.Size = new System.Drawing.Size(290, 509);
             this.tabOptions.TabIndex = 1;
             this.tabOptions.Text = "Options";
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.optSalutation4);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.optSalutation3);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.optMiddleNameLogic);
+            this.groupBox1.Controls.Add(this.optSalutation2);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.optSalutation1);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.optGenderAggression);
             this.groupBox1.Controls.Add(this.optCorrectFirstName);
@@ -203,6 +261,30 @@
             this.groupBox1.TabIndex = 86;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Actions";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 170);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(113, 15);
+            this.label4.TabIndex = 90;
+            this.label4.Text = "Gender Aggression";
+            // 
+            // optGenderAggression
+            // 
+            this.optGenderAggression.DropDownHeight = 108;
+            this.optGenderAggression.FormattingEnabled = true;
+            this.optGenderAggression.IntegralHeight = false;
+            this.optGenderAggression.Items.AddRange(new object[] {
+            "Aggressive",
+            "Neutral",
+            "Conservative"});
+            this.optGenderAggression.Location = new System.Drawing.Point(6, 188);
+            this.optGenderAggression.Name = "optGenderAggression";
+            this.optGenderAggression.Size = new System.Drawing.Size(227, 23);
+            this.optGenderAggression.TabIndex = 89;
+            this.optGenderAggression.Text = "Neutral";
             // 
             // optCorrectFirstName
             // 
@@ -219,25 +301,19 @@
             this.optNameHint.FormattingEnabled = true;
             this.optNameHint.IntegralHeight = false;
             this.optNameHint.Items.AddRange(new object[] {
-            "Definitely Full Name",
-            "Very Likely Full Name",
-            "Probably Full",
-            "Varying (Default)",
-            "Probably Inverse",
-            "Very Likely Inverse",
-            "Definitely Inverse",
-            "Mixed First Name",
-            "Mixed Last Name"});
-            this.optNameHint.Location = new System.Drawing.Point(6, 84);
+            "DefinitelyFull",
+            "Varying",
+            "DefinitelyInverse"});
+            this.optNameHint.Location = new System.Drawing.Point(6, 79);
             this.optNameHint.Name = "optNameHint";
             this.optNameHint.Size = new System.Drawing.Size(227, 23);
             this.optNameHint.TabIndex = 87;
-            this.optNameHint.Text = "Varying (Default)";
+            this.optNameHint.Text = "Varying";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(3, 161);
+            this.label17.Location = new System.Drawing.Point(6, 115);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(111, 15);
             this.label17.TabIndex = 79;
@@ -246,7 +322,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 66);
+            this.label7.Location = new System.Drawing.Point(3, 61);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(67, 15);
             this.label7.TabIndex = 88;
@@ -259,13 +335,13 @@
             this.optGenderPop.IntegralHeight = false;
             this.optGenderPop.Items.AddRange(new object[] {
             "Male",
-            "Mixed (Default)",
+            "Mixed",
             "Female"});
-            this.optGenderPop.Location = new System.Drawing.Point(6, 179);
+            this.optGenderPop.Location = new System.Drawing.Point(6, 133);
             this.optGenderPop.Name = "optGenderPop";
             this.optGenderPop.Size = new System.Drawing.Size(227, 23);
             this.optGenderPop.TabIndex = 76;
-            this.optGenderPop.Text = "Mixed (Default)";
+            this.optGenderPop.Text = "Mixed";
             // 
             // tabResponse
             // 
@@ -365,73 +441,119 @@
             this.lnkWiki.Text = "Wiki Reference Guide";
             this.lnkWiki.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkWiki_LinkClicked);
             // 
-            // txtCompanyIn
+            // optSalutation1
             // 
-            this.txtCompanyIn.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.txtCompanyIn.Location = new System.Drawing.Point(18, 176);
-            this.txtCompanyIn.Name = "txtCompanyIn";
-            this.txtCompanyIn.Size = new System.Drawing.Size(250, 22);
-            this.txtCompanyIn.TabIndex = 56;
-            this.txtCompanyIn.Text = "Melissa Data";
+            this.optSalutation1.DropDownHeight = 108;
+            this.optSalutation1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.optSalutation1.FormattingEnabled = true;
+            this.optSalutation1.IntegralHeight = false;
+            this.optSalutation1.Items.AddRange(new object[] {
+            "Formal",
+            "Informal",
+            "FirstLast",
+            "Blank",
+            ""});
+            this.optSalutation1.Location = new System.Drawing.Point(9, 275);
+            this.optSalutation1.Name = "optSalutation1";
+            this.optSalutation1.Size = new System.Drawing.Size(224, 23);
+            this.optSalutation1.TabIndex = 93;
             // 
-            // label3
+            // label8
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(15, 158);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 15);
-            this.label3.TabIndex = 55;
-            this.label3.Text = "Company";
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(9, 257);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(73, 15);
+            this.label8.TabIndex = 94;
+            this.label8.Text = "Salutation 1";
             // 
-            // label4
+            // optSalutation2
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 256);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(113, 15);
-            this.label4.TabIndex = 90;
-            this.label4.Text = "Gender Aggression";
-            // 
-            // optGenderAggression
-            // 
-            this.optGenderAggression.DropDownHeight = 108;
-            this.optGenderAggression.FormattingEnabled = true;
-            this.optGenderAggression.IntegralHeight = false;
-            this.optGenderAggression.Items.AddRange(new object[] {
-            "Aggressive",
-            "Neutral (Default)",
-            "Conservative"});
-            this.optGenderAggression.Location = new System.Drawing.Point(6, 274);
-            this.optGenderAggression.Name = "optGenderAggression";
-            this.optGenderAggression.Size = new System.Drawing.Size(227, 23);
-            this.optGenderAggression.TabIndex = 89;
-            this.optGenderAggression.Text = "Neutral (Default)";
+            this.optSalutation2.DropDownHeight = 108;
+            this.optSalutation2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.optSalutation2.FormattingEnabled = true;
+            this.optSalutation2.IntegralHeight = false;
+            this.optSalutation2.Items.AddRange(new object[] {
+            "Formal",
+            "Informal",
+            "FirstLast",
+            "Blank",
+            ""});
+            this.optSalutation2.Location = new System.Drawing.Point(9, 327);
+            this.optSalutation2.Name = "optSalutation2";
+            this.optSalutation2.Size = new System.Drawing.Size(224, 23);
+            this.optSalutation2.TabIndex = 95;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 351);
+            this.label5.Location = new System.Drawing.Point(9, 309);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(113, 15);
-            this.label5.TabIndex = 92;
-            this.label5.Text = "Middle Name Logic";
+            this.label5.Size = new System.Drawing.Size(73, 15);
+            this.label5.TabIndex = 96;
+            this.label5.Text = "Salutation 2";
             // 
-            // optMiddleNameLogic
+            // optSalutation3
             // 
-            this.optMiddleNameLogic.DropDownHeight = 108;
-            this.optMiddleNameLogic.FormattingEnabled = true;
-            this.optMiddleNameLogic.IntegralHeight = false;
-            this.optMiddleNameLogic.Items.AddRange(new object[] {
-            "Parse Logic (Default)",
-            "Hyphenated Last Name",
-            "Middle Name"});
-            this.optMiddleNameLogic.Location = new System.Drawing.Point(6, 369);
-            this.optMiddleNameLogic.Name = "optMiddleNameLogic";
-            this.optMiddleNameLogic.Size = new System.Drawing.Size(227, 23);
-            this.optMiddleNameLogic.TabIndex = 91;
-            this.optMiddleNameLogic.Text = "Parse Logic (Default)";
+            this.optSalutation3.DropDownHeight = 108;
+            this.optSalutation3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.optSalutation3.FormattingEnabled = true;
+            this.optSalutation3.IntegralHeight = false;
+            this.optSalutation3.Items.AddRange(new object[] {
+            "Formal",
+            "Informal",
+            "FirstLast",
+            "Blank",
+            ""});
+            this.optSalutation3.Location = new System.Drawing.Point(9, 376);
+            this.optSalutation3.Name = "optSalutation3";
+            this.optSalutation3.Size = new System.Drawing.Size(224, 23);
+            this.optSalutation3.TabIndex = 97;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(9, 358);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(73, 15);
+            this.label9.TabIndex = 98;
+            this.label9.Text = "Salutation 3";
+            // 
+            // optSalutation4
+            // 
+            this.optSalutation4.DisplayMember = "Blank";
+            this.optSalutation4.DropDownHeight = 108;
+            this.optSalutation4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.optSalutation4.FormattingEnabled = true;
+            this.optSalutation4.IntegralHeight = false;
+            this.optSalutation4.Items.AddRange(new object[] {
+            "Formal",
+            "Informal",
+            "FirstLast",
+            "Blank",
+            ""});
+            this.optSalutation4.Location = new System.Drawing.Point(9, 424);
+            this.optSalutation4.Name = "optSalutation4";
+            this.optSalutation4.Size = new System.Drawing.Size(224, 23);
+            this.optSalutation4.TabIndex = 99;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(9, 406);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(73, 15);
+            this.label10.TabIndex = 100;
+            this.label10.Text = "Salutation 4";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(72, 228);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(99, 15);
+            this.label11.TabIndex = 101;
+            this.label11.Text = "Salutation Order";
             // 
             // Form1
             // 
@@ -492,8 +614,17 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox optGenderAggression;
+        private System.Windows.Forms.TextBox txtCountryIn;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox optSalutation4;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox optSalutation3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox optMiddleNameLogic;
+        private System.Windows.Forms.ComboBox optSalutation2;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox optSalutation1;
     }
 }
 

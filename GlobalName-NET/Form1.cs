@@ -31,16 +31,56 @@ namespace GlobalName_NET
             if (optCorrectFirstName.Checked)
                 Options += "CorrectFirstName:ON,";
 
-            if (!optNameHint.SelectedIndex.Equals(3))
-                Options += "NameHint:" + (optNameHint.SelectedIndex + 1) + ",";
+            Options += "NameHint:" + (optNameHint.SelectedItem) + ",";
 
-            if (!optGenderPop.SelectedIndex.Equals(1))
-                Options += "GenderAggression:" + (optGenderPop.SelectedIndex + 1) + ",";
+            Options += "GenderPopulation:" + (optGenderPop.SelectedItem) + ",";
 
-            if (!optMiddleNameLogic.SelectedIndex.Equals(0))
-                Options += "MiddleNameLogic:" + optMiddleNameLogic.SelectedIndex + ",";
+            Options += "GenderAggression:" + (optGenderAggression.SelectedItem) + ",";
 
+            string SalOrderNew = "";
 
+            switch (optSalutation1.SelectedIndex)
+            {
+                case 0: SalOrderNew += "Formal|"; break;
+                case 1: SalOrderNew += "Informal|"; break;
+                case 2: SalOrderNew += "FirstLast|"; break;
+                case 3: SalOrderNew += "Blank|"; break;
+                default:
+                    break;
+            }
+            switch (optSalutation2.SelectedIndex)
+            {
+                case 0: SalOrderNew += "Formal|"; break;
+                case 1: SalOrderNew += "Informal|"; break;
+                case 2: SalOrderNew += "FirstLast|"; break;
+                case 3: SalOrderNew += "Blank|"; break;
+                default:
+                    break;
+            }
+            switch (optSalutation3.SelectedIndex)
+            {
+                case 0: SalOrderNew += "Formal|"; break;
+                case 1: SalOrderNew += "Informal|"; break;
+                case 2: SalOrderNew += "FirstLast|"; break;
+                case 3: SalOrderNew += "Blank|"; break;
+                default:
+                    break;
+            }
+            switch (optSalutation4.SelectedIndex)
+            {
+                case 0: SalOrderNew += "Formal|"; break;
+                case 1: SalOrderNew += "Informal|"; break;
+                case 2: SalOrderNew += "FirstLast|"; break;
+                case 3: SalOrderNew += "Blank|"; break;
+                default:
+                    break;
+            }
+
+            if (SalOrderNew != "")
+                Options += "Salutation:" + SalOrderNew.TrimEnd('|');
+
+            Options = Options.TrimEnd(',');
+ 
             RESTRequest += @"&opt=" + Options;
        
             // *************************************************************************************
@@ -48,12 +88,13 @@ namespace GlobalName_NET
             // *************************************************************************************
             RESTRequest += @"&full=" + Uri.EscapeDataString(txtNameIn.Text);
             RESTRequest += @"&comp=" + Uri.EscapeDataString(txtCompanyIn.Text);
+            RESTRequest += @"&ctry=" + Uri.EscapeDataString(txtCountryIn.Text);
 
             // Set JSON Response Protocol
             RESTRequest += @"&format=json";
 
             // Build the final REST String Query
-            RESTRequest = @"http://globalname.melissadata.net/V3/WEB/GlobalName" + @"/doGlobalName?t=" + RESTRequest;
+            RESTRequest = @"https://globalname-beta.melissadata.net/V3/WEB/GlobalName" + @"/doGlobalName?t=" + RESTRequest;
 
             // Output the REST Query
             txtRESTRequest.Text = RESTRequest;
@@ -102,10 +143,13 @@ namespace GlobalName_NET
 
             // options
             optCorrectFirstName.Checked = false;
-            optNameHint.SelectedIndex = 3;
-            optGenderPop.SelectedIndex = 1;
-            optGenderAggression.SelectedIndex = 1;
-            optMiddleNameLogic.SelectedIndex = 0;
+            optNameHint.SelectedItem = "Varying";
+            optGenderPop.SelectedItem = "Mixed";
+            optGenderAggression.SelectedItem = "Neutral";
+            optSalutation1.SelectedItem = "Formal";
+            optSalutation2.SelectedItem = "Informal";
+            optSalutation3.SelectedItem = "FirstLast";
+            optSalutation4.SelectedItem = "Blank";
 
             // request and response
             txtRESTRequest.Text = string.Empty;
