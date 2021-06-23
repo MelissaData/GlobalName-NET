@@ -94,7 +94,7 @@ namespace GlobalName_NET
             RESTRequest += @"&format=json";
 
             // Build the final REST String Query
-            RESTRequest = @"https://globalname-beta.melissadata.net/V3/WEB/GlobalName" + @"/doGlobalName?t=" + RESTRequest;
+            RESTRequest = @"https://globalname.melissadata.net/V3/WEB/GlobalName" + @"/doGlobalName?t=" + RESTRequest;
 
             // Output the REST Query
             txtRESTRequest.Text = RESTRequest;
